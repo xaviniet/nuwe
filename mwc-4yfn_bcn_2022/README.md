@@ -39,10 +39,8 @@ We will use two datasets:
 - Make a predictive model that let us know the customer segment from the prediction variables used on [test_x](https://challenges-asset-files.s3.us-east-2.amazonaws.com/data_sets/Data-Science/4+-+events/mwc22/mwc22-client_table+-+test_x.csv). (We must predict the CLIENT_SEGMENT variable)
 
 
+The notebook can be found [here](./4yfn-mwc_BCN_22.ipynb)
+
+
 Results are in ```mwc22-client_table_test_preds.csv```
 
-
-## Evaluation 
-900 points -> Goals. Evaluation done on EDA and f1-score(macro) on prediction of dataset ```test_x```
-200 points -> Code Quality
-100 points -> Documentation
