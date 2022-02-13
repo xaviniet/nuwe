@@ -1,37 +1,45 @@
-# 🖥 RETO
+# 🖥 Challenge 4YFN - MWC Barcelona 2022
+
 
 ## Background
 
-Nuwefruit es una startup que busca revolucionar los hábitos de la población fomentando el cosumo de fruta a diario. Por este motivo, la empresa está especializada en la venta de fruta a domicilio, que gracias a su algoritmo de optimización de la última milla le permite tener unos costes logisticos muy bajos. Esto permite que Nuwefruit pueda vender fruta a un precio inferior al de su competencia. Su catálogo se basa en la venta de más de 20 tipos de frutas, que son las que presentan las mejores propiedades nutritivas.
+Nuwefruit is a startup that wants to revolutionize people habit on everyday fruit intake. Because of this, the company is focused on home delivery, and thanks to its last mile optimization algorithm, has very low logistic costs. This lets Nuwefruit have lower prices than competition on selling fruits. Its catalog is based in more than 20 different types of fruit, the ones with better nutritional properties.
 
 ## Overview: the dataset and challenge
 
-Se emplearan dos datasets: el primero contiene datos de los clientes de Nuwefruit y el otro contiene los datos de los pedidos realizados por estos.
+We will use two datasets:
+ - **'CLIENT TABLE'**: Nuwefruit customer data
+ - **'ORDERS TABLE'**: Order data from the customers
+ 
+| **CLIENT TABLE** columns| Description |
+|:-|:-|
+| **CLIENT ID**| Unique customer id  |
+| **CLIENT_SEGMENT**| Client segment  |
+| **AVG CONSO**| Mean month consumption, calculated at the end of 2020 (pieces of fruit)  |
+| **AVG BASKET SIZE**| Mean basket size, calculated at the end of 2020 (pieces of fruit)  |
+| **RECEIVED_COMMUNICATION**| 1 = Recived a promotion / 0 = didn't receive a promotion|
 
-El dataset de clientes 'CLIENT TABLE' contiene las siguientes variables:
+> The 'CLIENT TABLE' dataset is [here](https://challenges-asset-files.s3.us-east-2.amazonaws.com/data_sets/Data-Science/4+-+events/mwc22/mwc22-client_table.csv)
 
-**CLIENT ID**: Identificador único del cliente
-**CLIENT_SEGMENT**: Segmento de clientes  
-**AVG CONSO**: Consumo medio mensual del cliente calculado a finales de 2020 (en piezas de fruta)  
-**AVG BASKET SIZE**: Tamaño medio de la cesta del cliente calculado a finales de 2020 (en piezas de fruta)  
-**RECEIVED_COMMUNICATION**: 1 = Recibió promoción de sus productos / 0 = no la recibió
-Haz click aquí para descargar 'CLIENT TABLE' dataset.
 
-El dataset de clientes 'ORDERS TABLE' contiene las siguientes variables:
+|**ORDERS TABLE** columns| Description|
+|:-|:-|
+|**CLIENT ID**| Unique customer id | 
+|**NB PRODS**| Number of 'prods' of the type of fruit (1 prod = 10 fruit pieces)|
+|**ORDER ID**| Unique order id |
+|**FRUIT_PRODUCT**| Type of fruit|  
 
-**CLIENT ID**: Identificador único del cliente  
-**NB PRODS**: Número de 'prods' de la variedad de fruta en el pedido (1 prod = 10 piezas de fruta)  
-**ORDER ID**: Identificador único del pedido  
-**FRUIT_PRODUCT**: Variedad de fruta  
-Haz click aquí para descargar 'ORDERS TABLE' dataset.
+> The  'ORDERS TABLE' dataset is [here](https://challenges-asset-files.s3.us-east-2.amazonaws.com/data_sets/Data-Science/4+-+events/mwc22/mwc22-orders_table.csv)
 
-## Objetivos
+## Goals
 
-- Haz un analisis exploratorio de los datos que permita:
-    - Analizar las ventas y la actividad de los clientes
-    - Evaluar el impacto de la promoción
-- Realiza un modelo predictivo que permita conocer el tipo de segmento al que pertenece cada cliente en función de las siguientes variables predictoras: Descargar test_x. (Se ha de predecir la variable (CLIENT_SEGMENT)).
+- Make an EDA that lets you do: 
+    - Analize sales and customer activity
+    - Evaluate promotion impact 
+- Make a predictive model that let us know the customer segment from the prediction variables used on [test_x](https://challenges-asset-files.s3.us-east-2.amazonaws.com/data_sets/Data-Science/4+-+events/mwc22/mwc22-client_table+-+test_x.csv). (We must predict the CLIENT_SEGMENT variable)
 
-900 puntos -> Objetivos. Los objetivos se evaluarán en función del EDA realizado y del f1-score(macro) obtenido al comparar las predicciones de tu algoritmo cuando se les mete como input las variables del dataset 'test_x'.
-200 puntos -> Cálidad del código
-100 puntos -> Documentación
+
+## Evaluation 
+900 points -> Goals. Evaluation done on EDA and f1-score(macro) on prediction of dataset ```test_x```
+200 points -> Code Quality
+100 points -> Documentation
